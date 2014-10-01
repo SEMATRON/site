@@ -1,0 +1,74 @@
+html, body {
+	margin: 0;
+	overflow: hidden;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("pattern-site-2.png");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-origin: center center;
+}
+
+.panel {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+}
+
+.info {
+	width: 1280px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -640px;
+	margin-top: -250px;
+	line-height: 500px;
+	text-align: center;
+}
+
+.arrow {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: -25px;
+	top: 50%;
+	background-color: #000;
+}
+
+.arrowLeft {
+	left: 0;
+}
+
+.arrowRight {
+	right: 0;
+}
+
+.shadowTop {
+	position: absolute;
+	background-image: url("shadow_top.png");
+	background-repeat: repeat-x;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+}
+
+.shadowBot {
+	position: absolute;
+	background-image: url("shadow_bot.png");
+	background-repeat: repeat-x;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 50px;
+}
