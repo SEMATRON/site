@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".gear").data({angle: 0, turnRate: 10});
+	$(".gear").data({angle: 0, turnRate: 100});
 	setInterval(function(){
 		var startAngle = $(".gear").data().angle;
 		var endAngle = startAngle + $(".gear").data().turnRate;
@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$(".gear").data().angle = endAngle;
 
 		$({deg: startAngle}).animate({deg: endAngle}, {
-	        duration: 1000,
+	        duration: 10000,
 	        step: function(now) {
 	            $(".gear").css({
 	                transform: 'rotate(' + now + 'deg)'
@@ -16,5 +16,5 @@ $(document).ready(function(){
 	        easing: "linear"
     	});
     	return arguments.callee;
-	}(), 1000);
+	}(), 10000);
 })
