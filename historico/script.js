@@ -8,6 +8,10 @@ $("document").ready(function(){
 
 	$(".arrowLeft").hide();
 
+	$(window).scroll(function(){
+		$(".background").css("background-position-y", -$(window).scrollTop()/2 + "px");
+	})
+
 	$(".nav .item").each(function(i){
 		$(this).data().to = i;
 	}).mouseenter(function(){
@@ -23,6 +27,8 @@ $("document").ready(function(){
 		if($(".background:animated").size()){
 			return false;
 		}
+
+		goToTop();
 
 		var from = $(".background").data().pos;
 		var to = $(this).data().to;
@@ -60,6 +66,15 @@ $("document").ready(function(){
 	maxPanels = $(".panel").size() - 1;
 });
 
+function goToTop(){
+	$({scroll: $(window).scrollTop()}).animate({scroll: 0}, {
+		duration: 1000,
+		step: function(now){
+			$(window).scrollTop(now);
+		}
+	})
+}
+
 var maxPanels;
 
 function animateLeft(){
@@ -79,6 +94,7 @@ function animateLeft(){
 	$(".background").animate({'background-position-x': "-=200px"}, 1000);
 	$(".panel").animate({"left": "-=100%"}, 1000);
 
+	goToTop();
 	updateSelected();
 }
 
@@ -101,6 +117,7 @@ function animateRight(){
 	$(".background").animate({'background-position-x': "+=200px"}, 1000);
 	$(".panel").animate({"left": "+=100%"}, 1000);
 
+	goToTop();
 	updateSelected();
 }
 
