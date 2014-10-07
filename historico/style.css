@@ -10,7 +10,7 @@ html, body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("pattern.png");
+	background-image: url("../pattern_dark.png");
 	background-repeat: repeat;
 	background-position: 0 0;
 	background-origin: center center;
