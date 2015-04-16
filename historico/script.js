@@ -67,6 +67,7 @@ $("document").ready(function(){
 
 	makeSlider("slider1");
 	makeSlider("slider2");
+	makeSlider("slider3");
 });
 
 function goToTop(){

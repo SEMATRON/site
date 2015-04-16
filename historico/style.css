@@ -24,7 +24,6 @@ html, body {
 
 .info {
 	width: 1000px;
-	height: 3000px;
 	position: absolute;
 	left: 50%;
 	margin-left: -500px;
@@ -160,6 +159,7 @@ h1 span {
 }
 
 .highlight {
+	line-height: 30px;
 	width: 1050px;
 	position: relative;
 	margin-left: -25px;
